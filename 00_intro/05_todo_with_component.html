@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>SG Todo App</h1>
+        <todo-list category="취업"></todo-list>
+        <todo-list category="점심"></todo-list>
+        <todo-list category="쇼핑"></todo-list>
+        <todo-card v-for="title in titles" v-bind:title="title" content="안녕이래"></todo-card>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./todoList.js"></script>
+    <script src="./todoCard.js"></script>
+
+    <!-- todo-list 컴포넌트 시작 -->
+
+    <!-- todo-list 컴포넌트 끝 -->
+
+
+    <!-- todo-card 컴포넌트 시작 -->
+
+    <!-- todo-card 컴포넌트 끝 -->
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                titles: [
+                    '안녕하소3131321321',
+                    '하이하소313131321312',
+                    'hi하소1231321313',
+                    'hel',
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
